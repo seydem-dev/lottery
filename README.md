@@ -44,4 +44,4 @@ getPlayers()
 ```
 getContractBalance()
 ```
-*Shows current contract balance*
+*Shows current contract balance.*
