@@ -1,5 +1,5 @@
 # Lottery
-**f**
+**If you like taking risks, THIS IF FOR YOU! Two lottery smart contracts. With and without the chainlinkVRF. Roll your dice whenever you're ready!**
 
 ```
 lotteryId
