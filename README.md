@@ -2,26 +2,46 @@
 **f**
 
 ```
-f
+lotteryId
 ```
 *f*
 
 ```
-f
+owner
 ```
 *f*
 
 ```
-f
+players
 ```
 *f*
 
 ```
-f
+lotteryHistory
 ```
 *f*
 
 ```
-f
+enter()
+```
+*f*
+
+```
+getRandomNumber()
+```
+*f*
+
+```
+pickWinner()
+```
+*f*
+
+```
+getPlayers()
+```
+*f*
+
+```
+getContractBalance()
 ```
 *f*
