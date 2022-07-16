@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 contract Lottery {
 
-    uint256 public lotteryId;
+    uint256 public lotteryId = 1;
 
     address public immutable owner;
     address payable[] public players;
@@ -13,7 +13,6 @@ contract Lottery {
 
     constructor() {
         owner = msg.sender;
-        lotteryId = 1;
     }
 
     function enter() external payable {
