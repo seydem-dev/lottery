@@ -2,6 +2,9 @@
 
 pragma solidity ^0.8.0;
 
+error InsufficientFunds();
+error NotOwner();
+
 contract Lottery {
 
     address public immutable owner;
@@ -17,7 +20,7 @@ contract Lottery {
     }
 
     function enter() external payable {
-        require(msg.value >= 0.01 ether, "Need to pay at least 0.01 ETH");
+        if (msg.value < 0.01 ether) revert InsufficientFunds();
         players.push(payable(msg.sender));
     }
 
@@ -26,7 +29,7 @@ contract Lottery {
     }
 
     function pickWinner() external {
-        require(msg.sender == owner, "Not owner");
+        if (msg.sender != owner) revert NotOwner();
         uint256 playersLength = players.length;
         uint256 index = getRandomNumber() % playersLength;
         players[index].transfer(address(this).balance);
