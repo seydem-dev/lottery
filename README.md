@@ -1,5 +1,5 @@
 # Lottery
-**If you like taking risks, THIS IF FOR YOU! Two lottery smart contracts. With and without the chainlinkVRF. Roll your dice whenever you're ready!**
+**If you like taking risks, THIS IF FOR YOU! Two lottery smart contracts. With and without the chainlinkVRF. Roll your dice whenever you're ready! IT IS HIGHLY RECOMMENDED TO USE LotteryVRF.sol IN PRODUCTION.**
 
 ```
 lotteryId
@@ -40,6 +40,64 @@ pickWinner()
 getPlayers()
 ```
 *Function which returns string of all participant addresses.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+# LotteryVRF
+**f**
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
+
+```
+getContractBalance()
+```
+*Shows current contract balance.*
 
 ```
 getContractBalance()
