@@ -1,5 +1,5 @@
 # Lottery
-**If you like taking risks, THIS IF FOR YOU! Two lottery smart contracts. With and without the chainlinkVRF. Roll your dice whenever you're ready! IT IS HIGHLY RECOMMENDED TO USE LotteryVRF.sol IN PRODUCTION.**
+**If you like taking risks, THIS IF FOR YOU! Two lottery smart contracts. With and without the chainlinkVRF. Roll your dice whenever you're ready! IT IS HIGHLY RECOMMENDED TO USE `LotteryVRF` IN PRODUCTION.**
 
 ```
 lotteryId
@@ -47,59 +47,64 @@ getContractBalance()
 *Shows current contract balance.*
 
 # LotteryVRF
-**f**
+**LotteryVRF is a lottery where the random number generation is withdrawn from the Chainlink oracles.**
 
 ```
-getContractBalance()
+owner
 ```
-*Shows current contract balance.*
+*Deployer address of `LotteryVRF.sol`*
 
 ```
-getContractBalance()
+_keyHash
 ```
-*Shows current contract balance.*
+*Required for random number generation.*
 
 ```
-getContractBalance()
+_FEE
 ```
-*Shows current contract balance.*
+*Fee required to pay in advance for any smart contract modification.*
 
 ```
-getContractBalance()
+lotteryId
 ```
-*Shows current contract balance.*
+*Counter for how many lotteries have been played.*
 
 ```
-getContractBalance()
+players
 ```
-*Shows current contract balance.*
+*Array of currently participating lottery players.*
 
 ```
-getContractBalance()
+lotteryWinners
 ```
-*Shows current contract balance.*
+*History of all the lottery winners.*
 
 ```
-getContractBalance()
+enter()
 ```
-*Shows current contract balance.*
+*Function which allows users to enter lottery, must pay 0.01 ETH to enter.*
 
 ```
-getContractBalance()
+getRandomNumber()
 ```
-*Shows current contract balance.*
+*Externally gets a (truly) random number.*
 
 ```
-getContractBalance()
+pickWinner()
 ```
-*Shows current contract balance.*
+*Picks random lottery winner, only callable by the owner.*
 
 ```
-getContractBalance()
+withdrawLink()
 ```
-*Shows current contract balance.*
+*Withdraws all link paid in fees, only callable by the owner.*
 
 ```
-getContractBalance()
+getPlayers()
 ```
-*Shows current contract balance.*
+*String of currently participating players.*
+
+```
+receive()
+```
+*Function which enables players to enter the lottery by directly sending ETH to smart contract.*
