@@ -9,7 +9,7 @@ contract Lottery {
 
     address public immutable owner;
 
-    uint256 public lotteryId = 1;
+    uint256 public lotteryId;
 
     address payable[] public players;
 
@@ -35,14 +35,10 @@ contract Lottery {
         players[index].transfer(address(this).balance);
         lotteryHistory[lotteryId] = players[index];
         lotteryId++;
-        players = new address payable[](0);
+        delete players;
     }
 
     function getPlayers() external view returns (address payable[] memory) {
         return players;
-    }
-
-    function getContractBalance() external view returns (uint256) {
-        return address(this).balance;
     }
 }
