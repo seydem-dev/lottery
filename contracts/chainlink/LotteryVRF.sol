@@ -12,7 +12,7 @@ contract LotteryVRF is VRFConsumerBase(0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655
 
     address public immutable owner;
 
-    bytes32 private _keyHash;
+    bytes32 private constant _keyHash = 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311;
 
     uint256 private constant _FEE = 0.1 * 1e18; // 0.1 LINK
     uint256 public randomResult;
@@ -32,7 +32,6 @@ contract LotteryVRF is VRFConsumerBase(0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655
      * Key Hash: 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311
      */
     constructor() {
-        _keyHash = 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311;
         owner = msg.sender;
        }
 
