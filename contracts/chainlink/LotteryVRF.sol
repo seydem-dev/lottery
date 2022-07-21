@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 
-error NotOwner();
-error InsufficientFunds();
-error NotEnoughLink();
-
 pragma solidity ^0.8.0;
 
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
+
+error NotOwner();
+error InsufficientFunds();
+error NotEnoughLink();
 
 contract LotteryVRF is VRFConsumerBase(0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B, 0x01BE23585060835E02B77ef475b0Cc51aA1e0709) {
 
@@ -14,7 +14,10 @@ contract LotteryVRF is VRFConsumerBase(0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655
 
     bytes32 private constant _keyHash = 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311;
 
-    uint256 private constant _FEE = 0.1 * 1e18; // 0.1 LINK
+    /**
+     * @dev _FEE = 0.1 LINK
+     */
+    uint256 private constant _FEE = 0.1 * 1e18;
     uint256 public randomResult;
     uint256 public lotteryId;
 
@@ -23,7 +26,7 @@ contract LotteryVRF is VRFConsumerBase(0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655
     mapping (uint256 => address payable) public lotteryWinners;
 
     /**
-     * Constructor inherits VRFConsumerBase
+     * @dev Constructor inherits VRFConsumerBase
      *
      * Oracle: Chainlink
      * Network: Rinkeby
